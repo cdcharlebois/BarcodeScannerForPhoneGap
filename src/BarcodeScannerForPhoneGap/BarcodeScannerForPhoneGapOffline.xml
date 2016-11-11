@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="BarcodeScannerForPhoneGap.widget.BarcodeScannerForPhoneGapOffline" offlineCapable="true" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>BarcodeScanner For PhoneGap</name>
+    <description>Creates a button to use the barcodescanner functionality.</description>
+    <icon>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAMBSURBVDhPPVNLKHxhFP/d+5+8xzPlvVAeUZNSFEkisqBEsvGe8lhZmGlYaBZIsrDwjEgR8lgQocg0IkMhhZoSC0Ym5JEpjz7fOfr76ja3ued85/c6yunpqZiYmICfnx9eXl7Q3d2Ns7MzhIaGQn5DWloajo+PMTs7i+rqakxNTcHT0xPPz8+orKzEPx8fH3NNTQ2urq7g5eUFp9OJj48PJCQkoKqqihtiY2PhcDgQHh6Oh4cHuLm5obS0FDRYpcmrq6tobm6GVqvFyckJX6YoCmJiYlBUVAS73Y7e3l7s7e3B19eXa6mHelWCIoTA4OAgFhYWuGF4eBidnZ2wWq24u7tDXFwcFhcX4XK5MD8/z7XUQ72KfBE7Ozuw2Ww8VaPR8BTiPjQ0hMvLS6ZVV1eHyMhIprm9vY34+HgUFhZCfX19RUZGBv/Z39+P4OBgBAUFsZB0IQlJ37u6uuDh4YGRkRF0dHTg6ekJdNTNzU1+ycnJgbe3Nw4ODliD6elp7O/vY25ujkVrbGxEfX09iouLWbz8/Hysr6//UiB7bm9vERISwrzpqaioQFZWFiYnJ3FxccFNJOra2hq78vn5ie/vb6h6vR7j4+P4+vriooCAAOZGZ2ZmBu7u7hgdHWU77+/vWRtCSbrRUaS/wmKxYGVlhW8lGkajEQUFBRwck8mE7OxshIWFISIiAm1tbSwkuUD1KsG+vr5muGVlZTg/P0dubi6ioqK4ISkpCZmZmQgMDGQEqampaGhoYIH7+vqgSOji/f0dh4eHbOHR0RESExOxsbGB8vJyLC0tYXd3l5+SkhIkJydjYGCABywvL0PT0tICf39/yEhzWFpbW7nYYDDAbDbzhf8FTElJgU6ng6qqyMvL+9Wgvb1dkL8UT0rY4+MjQyWFaToJ+Pb29mctoa2treXINzU1gSYJGRrR09Mj5CaKra0tIXdCSF2EjLaQqoubmxtyW8j8868cLCQVIdELDfk9Njb2t84kJiWNdiA6Ohrp6elsJdGgPFB4KDO07gDwA4hUmeLosX5VAAAAAElFTkSuQmCC
+    </icon>
+    <phonegap enabled="true"/>
+    <properties>
+        <property key="domTarget" type="string" required="false">
+            <caption>DOM Target</caption>
+            <category>Events</category>
+            <description>CSS selector for an `input` on the page to which the result of the barcode will be entered.</description>
+        </property>
+        <property key="buttonLabel" type="string" required="true">
+            <caption>Label</caption>
+            <category>Button</category>
+            <description></description>
+        </property>
+        <property key="buttonClass" type="string" required="false">
+            <caption>Class</caption>
+            <category>Button</category>
+            <description></description>
+        </property>
+    </properties>
+</widget>
