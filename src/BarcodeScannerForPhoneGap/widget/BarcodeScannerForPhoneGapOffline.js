@@ -11,6 +11,7 @@ define([
         buttonClass: "",
         // onchangemf: "",
         domTarget: "",
+        jsToExecute: "",
 
         _hasStarted: false,
         _obj: null,
@@ -58,7 +59,10 @@ define([
             if (!output.cancelled && output.text && output.text.length > 0) {
                 // this._obj.set(this.attributeName, output.text);
                 // this._executeMicroflow();
-                this._writeToDomTarget(output.text);
+                if (this.domTarget)
+                  this._writeToDomTarget(output.text);
+                if (this.jsToExecute)
+                  this._executeJS(output.text)
             }
         },
 
@@ -84,7 +88,15 @@ define([
               target.setAttribute('value', code)
             }
           }
-        }
+        },
+
+        _executeJS: function (code) {
+	    		try {
+	    			eval(this.jsToExecute + "\r\n//# sourceURL=" + this.id + ".js");
+	    		} catch (e) {
+	    			dojoConstruct.place("<div class=\"alert alert-danger\">Error while evaluating javascript input: " + e + "</div>", this.domNode, "only");
+	    		}
+	    	}
     });
 });
 
